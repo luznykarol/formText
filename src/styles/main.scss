@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+
+@import 'base/typography';
+
+@import 'common/global';
+@import 'common/fonts';
+@import 'common/buttons';
+@import 'common/forms';
+@import 'common/buttons';
+
+@import 'layout/footer';
+@import 'layout/navigation';
+
+@import 'pages/page';
+
+@import 'base/helpers';
+
+@tailwind utilities;
+
+// .form-wrap {
+//   max-width: 500px;
+//   margin: 0 auto;
+//   background: blue;
+//   color: #fff;
+//   @apply py-4;
+// }
+
+.input-wrap {
+  @apply my-4;
+
+  label {
+    @apply mr-4;
+  }
+  input {
+    @apply text-black;
+  }
+}

@@ -1,0 +1,13 @@
+.logo {
+  svg {
+    @apply mx-auto w-auto;
+    height: 30px;
+  }
+}
+
+.links {
+  @apply flex justify-center flex-wrap items-center mt-6;
+  &__item {
+    @apply text-sm m-2;
+  }
+}

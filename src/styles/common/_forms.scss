@@ -1,0 +1,101 @@
+.input,
+.textarea {
+  @apply border border-solid w-full;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+  &::placeholder,
+  &::-ms-input-placeholder,
+  &:-ms-input-placeholder {
+    @apply text-black;
+  }
+
+  &:hover {
+    @apply border-grey-darker;
+  }
+
+  &:active,
+  &:focus {
+    @apply outline-none;
+  }
+
+  &[disabled] {
+    @apply cursor-not-allowed;
+  }
+}
+
+.form-container {
+  @apply relative overflow-hidden;
+
+  &__status {
+    @apply flex items-center justify-center absolute z-10 w-full h-full opacity-0;
+    transform: translateY(100%);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+
+    h1 {
+      @apply m-0 text-center;
+    }
+
+    &--active {
+      @apply opacity-100;
+      transform: translateY(0);
+    }
+  }
+}
+
+.label {
+  @apply font-bold text-base mb-2 pl-1;
+}
+
+.input,
+.textarea {
+  @apply p-3 text-black;
+  border-radius: 5px;
+}
+.input {
+  @apply appearance-none  shadow-none;
+  line-height: 20px;
+  height: 48px;
+  border-radius: 5px;
+
+  .inline-input {
+    @apply inline;
+  }
+}
+
+.textarea {
+  @apply block min-w-full resize-y;
+  min-height: 200px;
+
+  .inline-textarea {
+    @apply inline;
+  }
+}
+
+.control {
+  @apply relative flex flex-col mb-6;
+
+  &__label {
+    @apply text-left font-bold text-sm mb-1;
+  }
+  &__error {
+    @apply font-bold text-red text-xs absolute left-0;
+    bottom: -18px;
+  }
+}
+
+.field-grouped {
+  @apply mb-4;
+  > .control {
+    @apply mb-0;
+    &:not(:last-child) {
+      @apply mb-2;
+    }
+  }
+}
+
+.errorField {
+}
+
+.checkbox__wrap {
+  @apply relative;
+}

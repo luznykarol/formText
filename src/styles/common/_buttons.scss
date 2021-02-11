@@ -1,0 +1,10 @@
+.btn {
+  @apply py-4 px-4;
+  border-radius: 5px;
+
+  &--submit {
+    max-width: 260px;
+
+    @apply bg-red text-white uppercase w-full mt-4;
+  }
+}
