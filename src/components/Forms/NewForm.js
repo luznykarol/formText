@@ -25,7 +25,7 @@ export default function NewForm({ title }) {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': title, data }),
+      body: { 'form-name': title, data },
     }).then(() => {
       console.log(encode({ 'form-name': title, data }))
       reset()
