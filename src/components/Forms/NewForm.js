@@ -4,7 +4,7 @@ import InputField from '@/components/Forms/partials/InputField'
 import TextField from '@/components/Forms/partials/TextField'
 import CheckboxField from '@/components/Forms/partials/Checkbox'
 
-export default function NewForm(title) {
+export default function NewForm({ title }) {
   const { register, watch, handleSubmit, reset, errors } = useForm({
     mode: 'onBlur',
   })
