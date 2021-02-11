@@ -20,14 +20,19 @@ export default function NewForm({ title }) {
   //onSubmit
   const onSubmit = (data, e) => {
     e.preventDefault()
-    console.log('event', e)
-    console.log('data', data)
+    // console.log('event', e)
+    // console.log('data', data)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: { 'form-name': title, data },
+      body: encode({
+        'form-name': e.target.getAttribute('name'),
+        ...data,
+      }),
     }).then(() => {
-      console.log(encode({ 'form-name': title, data }))
+      console.log(
+        encode({ 'form-name': e.target.getAttribute('name'), ...data }),
+      )
       reset()
       // this.clearForm()
     })
