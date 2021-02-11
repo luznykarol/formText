@@ -15,7 +15,7 @@ export const HomePageTemplate = ({ data }) => {
         <div className='container px-5 sm:px-10'>
           <section className='w-full bg-teal-100 py-20 px-5 rounded-lg shadow border-grey-lighter border'>
             <div className='text-center mx-auto'>
-              <NewForm title={'NewForm'}></NewForm>
+              <NewForm title='NewForm'></NewForm>
             </div>
           </section>
         </div>
